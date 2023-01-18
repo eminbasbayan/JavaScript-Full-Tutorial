@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--! Tailwind Css CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DOM Uygulama</title>
+  </head>
+  <body class="bg-black">
+    <h1 class="text-5xl my-10 text-center text-white">Todo List</h1>
+
+    <div class="container mx-auto w-1/2">
+      <form>
+        <div class="border flex">
+          <input
+            type="text"
+            placeholder="Bir şeyler yazınız..."
+            class="w-full p-3 relative z-90"
+            id="todo-input"
+          />
+          <button
+            type="submit"
+            class="border-l px-6 bg-green-500 text-white"
+            id="add-todo"
+          >
+            Ekle
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-end my-5">
+        <button
+          class="p-3 bg-red-500 text-white"
+          id="clear"
+        >
+          Temizle
+        </button>
+      </div>
+
+      <ul class="border p-6 flex flex-col gap-y-4 bg-white" id="todos">
+        <!--  <li
+          class="flex justify-between border px-4 py-3 flex items-center justify-between"
+        >
+          <span>Todo Name</span>
+          <button class="text-red-400">Sil</button>
+        </li> -->
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
