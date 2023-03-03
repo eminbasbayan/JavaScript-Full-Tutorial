@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul class="post-list">
+        <!--  
+        <li class="post-item">
+          <div class="post-body">
+            <span class="post-id">Post Id: <b>${item.id}</b></span>
+            <strong class="post-title">${item.title}</strong>
+            <p class="post-content">${item.body}</p>
+          </div>
+          <button class="post-button">Read More</button>
+        </li>
+     -->
+      </ul>
+    </div>
+
+    <script>
+      const postListDOM = document.querySelector(".post-list");
+
+      //! Ajax
+      /*    const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+      xhr.onload = function () {
+        const response = xhr.responseText;
+        const data = JSON.parse(response);
+        let result = "";
+        data.forEach((item) => {
+          result += `
+            <li class="post-item">
+            <div class="post-body">
+              <span class="post-id">Post Id: <b>${item.id}</b></span>
+              <strong class="post-title">${item.title}</strong>
+              <p class="post-content">${item.body}</p>
+            </div>
+            <button class="post-button">Read More</button>
+          </li>
+            `;
+          postListDOM.innerHTML = result;
+        });
+      };
+      xhr.send(); */
+
+      // Fetch
+      /*  
+     const postUI = (posts) => {
+        let result = "";
+        posts.forEach((item) => {
+          result += `
+            <li class="post-item">
+            <div class="post-body">
+              <span class="post-id">Post Id: <b>${item.id}</b></span>
+              <strong class="post-title">${item.title}</strong>
+              <p class="post-content">${item.body}</p>
+            </div>
+            <button class="post-button">Read More</button>
+          </li>
+            `;
+          postListDOM.innerHTML = result;
+        });
+      };
+
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((data) => postUI(data)); 
+        */
+
+      // Async & Await
+
+      const postUI = (posts) => {
+        let result = "";
+        posts.forEach((item) => {
+          result += `
+            <li class="post-item">
+            <div class="post-body">
+              <span class="post-id">Post Id: <b>${item.id}</b></span>
+              <strong class="post-title">${item.title}</strong>
+              <p class="post-content">${item.body}</p>
+            </div>
+            <button class="post-button">Read More</button>
+          </li>
+            `;
+          postListDOM.innerHTML = result;
+        });
+      };
+
+      const getData = async () => {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        const data = await response.json();
+        postUI(data);
+      };
+
+      window.addEventListener("DOMContentLoaded", (event) => {
+        getData();
+      });
+    </script>
+  </body>
+</html>
