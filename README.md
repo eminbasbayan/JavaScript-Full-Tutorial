@@ -34,7 +34,8 @@ Bu repo, [YouTube kanalımızdaki](https://www.youtube.com/channel/UCgZOWIieKTte
 28. [Asenkron JavaScript ve API Uygulama](https://www.youtube.com/watch?v=ftiCBKQx3SY&t "Asenkron JavaScript ve API Uygulama")
 29. [Genel JavaScript Uygulama - Tekrar](https://www.youtube.com/watch?v=_iIeq-mcN8E "Genel JavaScript Uygulama - Tekrar")
 30. [Bundan Sonra Yapılacaklar (Yeni Yol Haritası)](https://www.youtube.com/watch?v=RfJQKodLn4I "Bundan Sonra Yapılacaklar (Yeni Yol Haritası)")
-    Not: Yukarıdaki başlıklar ilgili video linklerine yönlendirecek şekilde ayarlanacaktır.
+    
+**Not**: Yukarıdaki başlıklar ilgili video linklerine yönlendirecek şekilde ayarlanacaktır.
 
 Katkıda Bulunma
 Bu repo, açık kaynaklı bir projedir ve her türlü katkıya açıktır. Eğer bir hata bulduysanız veya kodları geliştirmek için bir öneriniz varsa, lütfen bir pull request oluşturun veya bir issue açın.
